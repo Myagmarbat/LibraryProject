@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CheckOutController">
+  <center>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <center>
+        <TableView fx:id="table" prefHeight="286.0" prefWidth="685.0" BorderPane.alignment="CENTER">
+          <columns>
+            <TableColumn fx:id="colISBN" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="ISBN" />
+            <TableColumn fx:id="colCopyNum" prefWidth="75.0" text="Copy Number" />
+            <TableColumn fx:id="colCheckOutDate" maxWidth="5000.0" minWidth="10.0" prefWidth="161.0" text="Checkout Date" />
+            <TableColumn fx:id="colDueDate" maxWidth="5000.0" minWidth="10.0" prefWidth="137.0" text="Due Date" />
+                  <TableColumn fx:id="colReturnDate" maxWidth="5000.0" minWidth="10.0" prefWidth="114.0" text="Return Date" />
+          </columns>
+        </TableView>
+      </center>
+      <top>
+        <AnchorPane prefHeight="113.0" prefWidth="685.0" BorderPane.alignment="CENTER">
+          <children>
+            <Button layoutX="291.0" layoutY="45.0" mnemonicParsing="false" onAction="#searchBook" prefHeight="25.0" text="Search" />
+            <Label layoutX="23.0" layoutY="45.0" prefHeight="25.0" text="ISBN:" />
+            <TextField fx:id="txtISBN" layoutX="94.0" layoutY="45.0" prefHeight="25.0" prefWidth="190.0" />
+            <Label layoutX="23.0" layoutY="13.0" prefHeight="25.0" text="Member ID:" />
+            <TextField fx:id="txtMemberID" layoutX="94.0" layoutY="13.0" prefHeight="25.0" prefWidth="190.0" />
+            <Button layoutX="94.0" layoutY="80.0" mnemonicParsing="false" onAction="#createCheckOut" prefHeight="25.0" prefWidth="92.0" text="Create" />
+<!--             <Button fx:id="btnPrintCheckout" layoutX="353.0" layoutY="13.0" mnemonicParsing="false" onAction="#printCheckout" prefHeight="25.0" prefWidth="56.0" text="Print" /> -->
+            <Label fx:id="lblMemberInfo" layoutX="353.0" layoutY="17.0" prefWidth="250.0" />
+            <Label fx:id="lblBookInfo" layoutX="353.0" layoutY="49.0" prefWidth="318.0" />
+            <Button fx:id="btnSearchMember" layoutX="291.0" layoutY="12.0" mnemonicParsing="false" onAction="#searchMember" prefHeight="25.0" text="Search" />
+                  <Label layoutX="377.0" layoutY="80.0" prefHeight="25.0" text="Due Date:" />
+                  <Button fx:id="btnRenew" layoutX="619.0" layoutY="80.0" mnemonicParsing="false" onAction="#renewDueDate" prefHeight="25.0" text="Renew" />
+                  <TextField fx:id="txtDueDate" layoutX="439.0" layoutY="80.0" prefHeight="25.0" prefWidth="173.0" />
+          </children>
+        </AnchorPane>
+      </top>
+    </BorderPane>
+  </center>
+</BorderPane>

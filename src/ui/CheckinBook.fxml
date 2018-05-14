@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CheckInController">
+  <center>
+    <BorderPane prefHeight="200.0" prefWidth="685.0" BorderPane.alignment="CENTER">
+         <center>
+        <AnchorPane prefHeight="400.0" prefWidth="467.0" BorderPane.alignment="CENTER">
+          <children>
+            <Button layoutX="224.0" layoutY="109.0" mnemonicParsing="false" onAction="#searchCheckOutRecord" prefHeight="25.0" prefWidth="60.0" text="Search" />
+            <Label layoutX="23.0" layoutY="45.0" prefHeight="25.0" text="ISBN:" />
+            <TextField fx:id="txtISBN" layoutX="94.0" layoutY="45.0" prefHeight="25.0" prefWidth="190.0" />
+            <Label layoutX="23.0" layoutY="13.0" prefHeight="25.0" text="Member ID:" />
+            <TextField fx:id="txtMemberID" layoutX="94.0" layoutY="13.0" prefHeight="25.0" prefWidth="190.0" />
+            <TextField fx:id="txtBookCopyNum" layoutX="94.0" layoutY="77.0" prefHeight="25.0" prefWidth="190.0" />
+            <Label layoutX="23.0" layoutY="77.0" prefHeight="25.0" text="Book Copy:" />
+                  <Label fx:id="txtMsg" layoutX="24.0" layoutY="113.0" />
+          </children>
+        </AnchorPane>
+         </center>
+         <right>
+            <AnchorPane prefHeight="295.0" prefWidth="386.0" BorderPane.alignment="CENTER">
+               <children>
+            <Button fx:id="btnReturn" layoutX="231.0" layoutY="171.0" mnemonicParsing="false" onAction="#returnBookCopy" prefHeight="25.0" prefWidth="92.0" text="Return Book" />
+                  <TextField fx:id="txtMember" layoutX="136.0" layoutY="13.0" prefHeight="25.0" prefWidth="190.0" />
+                  <Label layoutX="20.0" layoutY="13.0" prefHeight="25.0" text="Member:" />
+                  <Label layoutX="20.0" layoutY="45.0" prefHeight="25.0" text="Book:" />
+                  <TextField fx:id="txtBook" layoutX="136.0" layoutY="45.0" prefHeight="25.0" prefWidth="190.0" />
+                  <Label layoutX="20.0" layoutY="77.0" prefHeight="25.0" text="Checkout Date:" />
+                  <TextField fx:id="txtCheckoutDate" layoutX="136.0" layoutY="77.0" prefHeight="25.0" prefWidth="190.0" />
+                  <TextField fx:id="txtDueDate" layoutX="136.0" layoutY="109.0" prefHeight="25.0" prefWidth="190.0" />
+                  <Label layoutX="20.0" layoutY="109.0" prefHeight="25.0" text="Due Date:" />
+                  <TextField fx:id="txtReturnDate" layoutX="136.0" layoutY="141.0" prefHeight="25.0" prefWidth="190.0" />
+                  <Label layoutX="20.0" layoutY="141.0" prefHeight="25.0" text="Return Date:" />
+               </children>
+            </AnchorPane>
+         </right>
+    </BorderPane>
+  </center>
+</BorderPane>

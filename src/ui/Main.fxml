@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="bPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutY="-1.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0b6623;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="14.0" text="Library" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT Poster Compressed" size="49.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="mainRole" layoutX="10.0" layoutY="79.0" text="Administrator" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="menuLibraryMembers" layoutX="27.0" layoutY="157.0" onMouseClicked="#libraryMembersMenu" text="Members" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="menuBook" layoutX="27.0" layoutY="117.0" onMouseClicked="#booksMenu" text="Books" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="328.0" onMouseClicked="#logOutMenu" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="menuCheckOut" layoutX="25.0" layoutY="197.0" onMouseClicked="#checkOutMenu" text="Checkout" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Line endX="60.0" layoutX="112.0" layoutY="117.0" startX="-100.0" stroke="WHITE" />
+                  <Pane layoutX="-165.0" layoutY="-86.0" prefHeight="200.0" prefWidth="200.0" />
+                  <Line endX="60.0" layoutX="111.0" layoutY="331.0" startX="-100.0" stroke="WHITE" />
+                  <Label fx:id="menuOverdue" layoutX="27.0" layoutY="277.0" onMouseClicked="#overDueMenu" text="Overdue" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="menuCheckIn" layoutX="25.0" layoutY="237.0" onMouseClicked="#checkInMenu" text="Return book" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

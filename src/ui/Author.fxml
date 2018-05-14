@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AuthorController">
+  <center>
+    <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <center>
+        <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+          <items>
+            <TableView fx:id="table" prefHeight="319.0" prefWidth="407.0000999999975">
+              <columns>
+                <TableColumn fx:id="colFirstName" maxWidth="5000.0" minWidth="10.0" prefWidth="76.0" text="First Name" />
+                <TableColumn fx:id="colLastName" maxWidth="5000.0" minWidth="0.0" prefWidth="105.0" text="Last Name" />
+                <TableColumn fx:id="colBio" maxWidth="5000.0" minWidth="10.0" prefWidth="224.0" text="bio" />
+              </columns>
+            </TableView>
+            <!-- <TableView fx:id="table1" prefHeight="319.0" prefWidth="407.0000999999975">
+                     <columns>
+                        <TableColumn fx:id="colFirstName1" maxWidth="5000.0" minWidth="10.0" prefWidth="111.0" text="First Name" />
+                        <TableColumn fx:id="colLastName1" maxWidth="5000.0" minWidth="10.0" prefWidth="128.0" text="Last Name" />
+                        <TableColumn fx:id="colPhone1" maxWidth="5000.0" minWidth="10.0" prefWidth="100.0" text="Phone" />
+                     </columns>
+                  </TableView> -->
+          </items>
+        </SplitPane>
+      </center>
+    </BorderPane>
+  </center>
+  <right>
+    <AnchorPane prefHeight="400.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+      <children>
+        <TextField fx:id="tFirstName" layoutX="85.0" layoutY="14.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="18.0" text="First Name:" />
+        <TextField fx:id="tLastName" layoutX="85.0" layoutY="44.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="48.0" text="Last Name:" />
+        <TextField id="phoneNumber" fx:id="tTelephone" layoutX="85.0" layoutY="74.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="78.0" text="Phone:" />
+        <Button layoutX="184.0" layoutY="310.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="80.0" text="Cancel" />
+        <Button layoutX="17.0" layoutY="349.0" mnemonicParsing="false" onAction="#done" prefHeight="25.0" prefWidth="248.0" text="Select Authors" />
+        <Button fx:id="btnCreate" layoutX="19.0" layoutY="310.0" mnemonicParsing="false" onAction="#createNewAuthor" prefHeight="25.0" prefWidth="147.0" text="Save Author" />
+        <TextField id="street" fx:id="tStreet" layoutX="85.0" layoutY="160.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="164.0" text="Street:" />
+        <TextField id="city" fx:id="tCity" layoutX="85.0" layoutY="190.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="194.0" prefWidth="26.9998779296875" text="City:" />
+        <TextField id="state" fx:id="tState" layoutX="85.0" layoutY="220.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="17.0" layoutY="224.0" text="State:" />
+        <TextField id="zip" fx:id="tZip" layoutX="86.0" layoutY="250.0" prefHeight="25.0" prefWidth="189.0" />
+        <Label layoutX="18.0" layoutY="254.0" text="Zip Code:" />
+        <Label layoutX="19.0" layoutY="105.0" text="Bio:" />
+        <TextArea id="txtBio" fx:id="tBio" layoutX="85.0" layoutY="104.0" prefHeight="52.0" prefWidth="189.0" />
+        <Label fx:id="messageBox" layoutX="19.0" layoutY="280.0" prefHeight="25.0" prefWidth="249.0" text="" />
+      </children>
+    </AnchorPane>
+  </right>
+</BorderPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.OverDueController">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="52.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnSearch" layoutX="343.0" layoutY="14.0" mnemonicParsing="false" onAction="#search" text="Search" />
+                  <Label layoutX="21.0" layoutY="19.0" text="ISBN:" />
+                  <TextField fx:id="txtISBN" layoutX="70.0" layoutY="15.0" prefHeight="25.0" prefWidth="262.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <TableView fx:id="tableOverdue" prefHeight="348.0" prefWidth="465.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colTitle" prefWidth="145.0" text="Copy Number" />
+                <TableColumn fx:id="colIsbn" prefWidth="129.0" text="checkOutDate" />
+                  <TableColumn fx:id="colCheckoutDays" minWidth="0.0" prefWidth="87.0" text="Due Date" />
+                  <TableColumn fx:id="colAuthors" prefWidth="104.0" text="Library Member" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
